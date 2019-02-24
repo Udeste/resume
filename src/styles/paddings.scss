@@ -1,0 +1,19 @@
+@for $var from 0 to 20 {
+  .p {
+    &-#{$var} {
+      padding: #{$var}px;
+    }
+    &-l-#{$var} {
+      padding-left: #{$var}px;
+    }
+    &-r-#{$var} {
+      padding-right: #{$var}px;
+    }
+    &-t-#{$var} {
+      padding-top: #{$var}px;
+    }
+    &-b-#{$var} {
+      padding-bottom: #{$var}px;
+    }
+  }
+}

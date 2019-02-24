@@ -1,0 +1,19 @@
+@for $var from 0 to 25 {
+  .m {
+    &-#{$var} {
+      margin: #{$var}px;
+    }
+    &-l-#{$var} {
+      margin-left: #{$var}px;
+    }
+    &-r-#{$var} {
+      margin-right: #{$var}px;
+    }
+    &-t-#{$var} {
+      margin-top: #{$var}px;
+    }
+    &-b-#{$var} {
+      margin-bottom: #{$var}px;
+    }
+  }
+}
