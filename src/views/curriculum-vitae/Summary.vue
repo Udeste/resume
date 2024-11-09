@@ -10,7 +10,7 @@ import { useStore } from 'vuex'
 
 const store = useStore()
 
-const { summary } = store.state.cv;
+const { summary } = store.state.cv
 </script>
 
 <style lang="scss" scoped>

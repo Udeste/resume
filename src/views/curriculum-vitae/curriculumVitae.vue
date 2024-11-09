@@ -9,7 +9,7 @@
         <Certifications class="p-r-10"/>
       </div>
       <div class="flex flex-col">
-        <!-- <work-experiences></work-experiences> -->
+        <WorkExperienceList/>
         <EducationList id="education-list"/>
       </div>
     </div>
@@ -21,7 +21,7 @@ import Summary from './Summary.vue';
 import ContactInfo from './ContactInfo.vue';
 import EducationList from './education/EducationList.vue';
 import Certifications from './certifications/Certifications.vue';
-import WorkExperiences from './work-experiences/work-experiences.vue';
+import WorkExperienceList from './work-experiences/WorkExperienceList.vue';
 
 </script>
 <style lang="scss" scoped>
