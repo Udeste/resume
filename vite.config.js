@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
-import { createVuePlugin as vue } from 'vite-plugin-vue2';
-const path = require('path');
+import vue from '@vitejs/plugin-vue'
+import * as path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,4 +10,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler' // or "modern"
+      }
+    }
+  }
 })

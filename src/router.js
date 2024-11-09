@@ -1,10 +1,8 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import CurriculumVitae from '@/views/curriculum-vitae/curriculum-vitae.vue';
+import CurriculumVitae from '@/views/curriculum-vitae/curriculumVitae.vue';
+import { createMemoryHistory, createRouter } from 'vue-router'
 
-Vue.use(Router);
-
-export default new Router({
+export default createRouter({
+  history: createMemoryHistory(),
   routes: [
     {
       path: '/',

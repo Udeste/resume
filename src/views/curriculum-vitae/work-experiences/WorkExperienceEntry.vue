@@ -25,12 +25,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'WorkExperience',
-  props: ['experience']
-};
+<script setup>
+
+const { experience } = defineProps(['experience'])
 </script>
+
 <style lang="scss" scoped>
 .work-experience {
   margin-bottom: 10px;

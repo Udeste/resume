@@ -1,33 +1,28 @@
 <template>
   <div id="educations">
-    <h1>education</h1>
-    <div class="education m-b-10" v-for="education in educations" :key="education.title">
+    <h1>Education</h1>
+    <div class="education m-b-10" v-for="educationEntry in education" :key="educationEntry.title">
       <div class="head">
         <div class="title flex flex-column">
-          <span>{{ education.title }}</span>
+          <span>{{ educationEntry.title }}</span>
           <span class="institute">
-            <a :href="education.institute.url" target="_blank">{{ education.institute.name }}</a>
+            <a :href="educationEntry.institute.url" target="_blank">{{ educationEntry.institute.name }}</a>
           </span>
         </div>
         <div class="dates flex flex-column">
-          <span>{{ education.dates.from }}</span>
-          <span>{{ education.dates.to }}</span>
+          <span>{{ educationEntry.dates.from }}</span>
+          <span>{{ educationEntry.dates.to }}</span>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Educations',
-  components: {},
-  computed: {
-    educations() {
-      return this.$store.state.cv.educations;
-    }
-  }
-};
+<script setup>
+import { useStore } from 'vuex'
+const store = useStore()
+
+const { education } = store.state.cv;
 </script>
 <style lang="scss" scoped>
 #educations {

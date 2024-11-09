@@ -5,9 +5,9 @@
 </template>
 
 <style lang="scss">
-@import './styles/flex.scss';
-@import './styles/margins.scss';
-@import './styles/paddings.scss';
+@use './styles/flex';
+@use './styles/margins';
+@use './styles/paddings';
 
 #app {
   font-family: 'Calibri', 'Avenir', Helvetica, Arial, sans-serif;
