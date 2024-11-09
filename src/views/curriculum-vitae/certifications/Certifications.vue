@@ -1,6 +1,6 @@
 <template>
   <div id="certifications">
-    <h1>certifications</h1>
+    <h1>Certifications</h1>
     <div class="certification m-b-10"
       v-for="certification in certifications"
       :key="certification.title">
@@ -27,17 +27,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'certifications',
-  components: {},
-  computed: {
-    certifications() {
-      return this.$store.state.cv.certifications;
-    }
-  }
-};
+<script setup>
+import { useStore } from 'vuex'
+const store = useStore()
+
+const { certifications } = store.state.cv;
 </script>
+
 <style lang="scss" scoped>
 #certifications {
   .certification {
